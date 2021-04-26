@@ -1,0 +1,9 @@
+from building import *
+
+cwd     = GetCurrentDir()
+src     = Glob('*.c')
+CPPPATH = [cwd]
+
+group = DefineGroup('debugtool', src, depend = ['USING_DEBUGTOOL'], CPPPATH = CPPPATH)
+
+Return('group')

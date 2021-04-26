@@ -1,0 +1,9 @@
+from building import *
+
+cwd     = GetCurrentDir()
+src     = Glob('*.c')
+CPPPATH = [cwd]
+
+group = DefineGroup('wbrtc_agc', src, depend = ['USING_WBRTCAGC'], CPPPATH = CPPPATH)
+
+Return('group')
